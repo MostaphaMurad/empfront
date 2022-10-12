@@ -1,0 +1,34 @@
+<div class="col-md-6 offset-md-3 offset-">
+  <h3 class="h3">Found Employee</h3>
+  <form (ngSubmit)="onSubmit()" >
+    <div class="form-group">
+      <input type="text" name="id" [(ngModel)]="id">
+    </div>
+    <button type="submit">Find Employee</button>
+  </form>
+
+  <table class="table table-striped mt-3">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Address</th>
+      <th>JobTitle</th>
+      <th>Phone</th>
+    </tr>
+    </thead>
+    <tbody>
+      <td>{{employee?.id}}</td>
+      <td>{{employee?.name}}</td>
+      <td>{{employee?.email}}</td>
+      <td>{{employee?.address}}</td>
+      <td>{{employee?.jobTitle}}</td>
+      <td>{{employee?.phone}}</td>
+      <td>
+        <button (click)="deleteEmployee(employee?.id)" class="btn btn-info btn-sm">Delete Employee</button>
+      </td>
+    </tbody>
+  </table>
+
+</div>
